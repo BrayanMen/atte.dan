@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import Button from './Button';
-import { MessageCircleHeart, Telescope, BrainCircuit, CassetteTape, Glasses, MessageCircleMore , Cable, Pizza } from 'lucide-react';
+import { MessageCircleHeart, Telescope, BrainCircuit, CassetteTape, Glasses, MessageCircleMore, Cable, Pizza } from 'lucide-react';
 
-function MainArticles() {
-    const [activeCategory, setActiveCategory] = useState(null);
+function MainArticles({ activeCategory, activeSubcategory, onCategoryChange, onSubcategoryChange }) {
 
     const categories = [
         {
@@ -54,18 +53,14 @@ function MainArticles() {
         }
     ];
 
-    const handleCategoryClick = (text) => {
-        setActiveCategory(activeCategory === text ? null : text);
-    };
     return (
-        <>            
+        <>
             <div className="flex space-x-4 text-xl z-1 justify-end items-center">
                 {categories.map(({ icon: Icon, text }) => (
                     <Button
                         key={text}
-                        className={`bg-asparagus text-lavender-web ${activeCategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''
-                            }`}
-                        onClick={() => handleCategoryClick(text)}
+                        className={`bg-asparagus text-lavender-web ${activeCategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''}`}
+                        onClick={() => onCategoryChange(text)}
                     >
                         <Icon className="mr-2 h-4 w-4" />
                         {text}
@@ -79,9 +74,8 @@ function MainArticles() {
                         ?.subCategories.map(({ icon: Icon, text }) => (
                             <Button
                                 key={text}
-
-                                className={`bg-asparagus text-lavender-web ${activeCategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''
-                                    }`}
+                                className={`bg-asparagus text-lavender-web ${activeSubcategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''}`}
+                                onClick={() => onSubcategoryChange(text)}
                             >
                                 <Icon className="mr-2 h-4 w-4" />
                                 {text}
