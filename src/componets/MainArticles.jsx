@@ -7,7 +7,7 @@ function MainArticles({ items, activeCategory, activeSubcategory, onCategoryChan
                 {items.map(({ icon: Icon, text }) => (
                     <Button
                         key={text}
-                        className={`bg-asparagus text-lavender-web ${activeCategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''}`}
+                        className={`bg-ebony text-lavender-web ${activeCategory === text ? 'ring-2 ring-offset-2 ring-asparagus' : ''}`}
                         onClick={() => onCategoryChange(text)}
                     >
                         <Icon className="mr-2 h-4 w-4" />

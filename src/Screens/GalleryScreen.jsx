@@ -124,7 +124,7 @@ export default function GalleryScreen() {
                         <div className="absolute inset-0 bg-black/20" />
                     </div>
 
-                    <div className="relative z-10 flex items-end justify-center h-full">
+                    {/* <div className="relative z-10 flex items-end justify-center h-full">
                         <div className="text-center text-white  px-4">
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 opacity-50 tracking-tight">
                                 CAPTURANDO
@@ -136,7 +136,7 @@ export default function GalleryScreen() {
                                 encuentra su voz.
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="text-center my-8">
                     <h2 className="text-4xl md:text-5xl font-bold mb-8">FOTOGRAFIA</h2>

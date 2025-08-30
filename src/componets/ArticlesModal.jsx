@@ -26,7 +26,7 @@ const ArticlesModal = ({ article, onClose }) => {
             <div className="bg-olivine text-space-cadet px-4 py-1 inline-block font-poppins">
               ARTICULO
             </div>
-            <h1 className="text-3xl font-light font-poppins">{article.title}</h1>
+            <h1 className="text-5xl font-bold font-serif ">{article.title}</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative">
                 <img
